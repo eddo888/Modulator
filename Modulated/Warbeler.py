@@ -16,6 +16,7 @@ args = Argue()
 @args.command(single=True)
 class Warbeler(object):
 	
+	@logger.debug
 	@args.property(short='c', flag=True, help='output in colour')
 	def colour(self): 
 		return False	
@@ -23,6 +24,7 @@ class Warbeler(object):
 	def __init__(self, colour=False):
 		self.colour = colour
 	
+	@logger.info
 	@args.operation
 	@args.parameter(name='files', short='f', nargs='*', metavar='file')
 	def sing(self, files=[]):
