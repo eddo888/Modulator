@@ -41,7 +41,7 @@ class Warbeler(object):
 				colour = self.colours.Green
 			sys.stdout.write(f'{colour}{file}{off}\n')
 		del self.colours
-		return
+		return files
 		
 	@args.operation
 	@args.parameter(name='file')
