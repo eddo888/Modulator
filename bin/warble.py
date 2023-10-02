@@ -6,7 +6,7 @@ import io, sys, os
 
 sys.path.insert(0, '..')
 	
-from Modulated.Warbeler import Warbeler, args
+from Modulated.Warbeler import args
 
 args.execute()
 

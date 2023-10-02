@@ -37,6 +37,7 @@ class Warbeler(object):
 			if os.path.islink(file):
 				colour = self.colours.Green
 			sys.stdout.write(f'{colour}{file}{off}\n')
+		del self.colours
 		return
 	
 if __name__ == '__main__': args.execute()
