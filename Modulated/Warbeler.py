@@ -26,6 +26,9 @@ class Warbeler(object):
 	@args.operation
 	@args.parameter(name='files', short='f', nargs='*', metavar='file')
 	def sing(self, files=[]):
+		'''
+		coloured file name outpu
+		'''
 		self.colours = Colours(colour=self.colour)
 		for file in files:
 			off = self.colours.Off
@@ -39,7 +42,15 @@ class Warbeler(object):
 			sys.stdout.write(f'{colour}{file}{off}\n')
 		del self.colours
 		return
-	
+		
+	@args.operation
+	@args.parameter(name='file')
+	def song(self, file):
+		'''
+		stat the file
+		'''
+		print(os.stat(file))
+		
 if __name__ == '__main__': args.execute()
 
 
